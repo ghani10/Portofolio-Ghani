@@ -5,5 +5,8 @@
   },
   "scripts": {
     "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+  },
+  "dependencies": {
+    "chart.js": "^4.4.7"
   }
 }

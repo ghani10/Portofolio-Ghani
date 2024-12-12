@@ -35,9 +35,11 @@
                             <li><a href="#">Home</a></li>
                             <li>
                                 <a href="#">Projects</a>
-                                <ul class="p-2">
-                                    <li><a href="#">Pro 1</a></li>
-                                    <li><a href="#">Pro 2</a></li>
+                                <ul class="p-2 disabled">
+                                    <li><a href="#Login">Login Projec</a></li>
+                                    <li><a href="#kalkulator">Kalkulator</a></li>
+                                    <li><a href="#chart">Chart Project</a></li>
+                                    <li><a href="#snake_game">Snake Game</a></li>
                                 </ul>
                             </li>
                             <li><a href="#">Contact</a></li>
@@ -48,12 +50,14 @@
                 <div class="navbar-center hidden lg:flex">
                     <ul class="menu menu-horizontal px-1">
                         <li class=""><a href="#">Home</a></li>
-                        <li class="">
+                        <li class="disabled">
                             <details>
                                 <summary>Projects</summary>
                                 <ul class="p-2">
-                                    <li><a href="#">Pro 1</a></li>
-                                    <li><a href="#">Pro 2</a></li>
+                                    <li><a href="#Login">Login Projec</a></li>
+                                    <li><a href="#kalkulator">Kalkulator</a></li>
+                                    <li><a href="#chart">Chart Project</a></li>
+                                    <li><a href="#snake_game">Snake Game</a></li>
                                 </ul>
                             </details>
                         </li>
@@ -100,9 +104,9 @@
         <div class="text-center ">
             <h2 class="text-5xl font-bold mb-10 mt-10 p-3">Projects</h2>
         </div>
-        <div class="carousel carousel-center bg-neutral rounded-box max-w-fit space-x-10 p-4">
+        <div class="carousel carousel-center bg-neutral rounded-box w-screen space-x-8 p-4">
             <div class="carousel-item">
-                <div class="card bg-slate-50 w-96 shadow-xl">
+                <div id="#Login" class="card bg-slate-50 w-96 shadow-xl">
                     <figure>
                         <img 
                         src="/src/asset/Login_mock.png" 
@@ -128,7 +132,7 @@
                     </div>
                 </div>
             </div>
-            <div class="carousel-item">
+            <div id="#kalkulator" class="carousel-item">
                 <div class="card bg-slate-50 w-96 shadow-xl">
                     <figure>
                         <img 
@@ -154,23 +158,56 @@
                     </div>
                 </div>
             </div>
-            <div class="carousel-item">
+            <div id="#chart" class="carousel-item">
                 <div class="card bg-slate-50 w-96 shadow-xl">
                     <figure>
                         <img 
-                        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" 
+                        src="/src/asset/diagram_mock.png" 
                         alt=""
+                        class="mt-12 image-full"
                         >
                     </figure>
                     <div class="card-body">
-                        <h2 class="card-title">
-                            Shoes
+                        <h2 class="card-title font-sans font-bold text-slate-700 ">
+                            Diagram With Chart JS
                             <div class="badge badge-secondary">New!</div>
                         </h2>
-                        <p> Ini adalah project pertama saya menggunakan framework daisyUI.</p>
+                        <p> Ini adalah project Diagram saya saya menggunakan Chartjs, Dan TailwindCSS.</p>
                         <div class="card-actions justify-end">
                             <div class="badge badge-outline">Code</div>
                             <div class="badge badge-outline">Boiler Plate</div>
+                        </div>
+                        <div>
+                            <button class="btn btn-active">
+                                <a target="_blank" href="/src/pages/diagram.html">Look here</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="#snake_game" class="carousel-item">
+                <div class="card bg-slate-50 w-96 shadow-xl">
+                    <figure>
+                        <img 
+                        src="/src/asset/snake_mock.png" 
+                        alt=""
+                        class="mt-12 image-full"
+                        >
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title font-sans font-bold text-slate-700 ">
+                            Snake Game With Vanila JS
+                            <div class="badge badge-secondary">New!</div>
+                        </h2>
+                        <p> Ini adalah project Game saya Menggunakan Vanila JS, HTML, Dan CSS.</p>
+                        <div class="card-actions justify-end">
+                            <div class="badge badge-outline">Code</div>
+                            <div class="badge badge-outline">Game</div>
+                        </div>
+                        <div>
+                            <button class="btn btn-active">
+                                <a target="_blank" href="/src/pages/snakeGame.html">Look here</a>
+                            </button>
                         </div>
                     </div>
                 </div>
