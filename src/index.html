@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio Ghani | Web Developer</title>
-    <link rel="stylesheet" href="/Portofolio-Ghani/dist/output.css">
+    <link rel="stylesheet" href="/dist/output.css">
 </head>
 <body>
     
@@ -73,7 +73,7 @@
        <div class="hero bg-base-200 min-h-fit">
            <div class="hero-content flex-col relative lg:flex-row-reverse">
                         <img 
-                        src="/Portofolio-Ghani/src/asset/profile.webp" 
+                        src="/src/asset/profile.webp" 
                         class="max-w-sm rounded-lg shadow-2xl"
                         alt="">
                 <div >
@@ -105,19 +105,25 @@
                 <div class="card bg-slate-50 w-96 shadow-xl">
                     <figure>
                         <img 
-                        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" 
+                        src="/src/asset/Login_mock.png" 
                         alt=""
+                        class="width-full"
                         >
                     </figure>
                     <div class="card-body">
-                        <h2 class="card-title">
-                            Shoes
-                            <div class="badge badge-secondary">New!</div>
+                        <h2 class="card-title font-sans font-bold text-slate-700">
+                            Form Log In
+                            <div class="badge badge-info p-3">New!</div>
                         </h2>
-                        <p> Ini adalah project pertama saya menggunakan framework daisyUI.</p>
+                        <p>project pertama saya menggunakan framework Tailwind Dan DaisyUi. Saya Membuat Template Log In</p>
                         <div class="card-actions justify-end">
                             <div class="badge badge-outline">Code</div>
                             <div class="badge badge-outline">Boiler Plate</div>
+                        </div>
+                        <div>
+                            <button class="btn btn-active">
+                                <a target="_blank" href="/src/pages/login.html">Look here</a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -126,19 +132,24 @@
                 <div class="card bg-slate-50 w-96 shadow-xl">
                     <figure>
                         <img 
-                        src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" 
+                        src="/src/asset/kalkulator_mock.png" 
                         alt=""
                         >
                     </figure>
                     <div class="card-body">
-                        <h2 class="card-title">
-                            Shoes
+                        <h2 class="card-title font-sans font-bold text-slate-700">
+                            Kalkulator Vanila JS
                             <div class="badge badge-secondary">New!</div>
                         </h2>
-                        <p> Ini adalah project pertama saya menggunakan framework daisyUI.</p>
+                        <p> Ini adalah project Kalkulator saya menggunakan framework TailwindCSS, Html, Vanila JS.</p>
                         <div class="card-actions justify-end">
                             <div class="badge badge-outline">Code</div>
                             <div class="badge badge-outline">Boiler Plate</div>
+                        </div>
+                        <div>
+                            <button class="btn btn-active">
+                                <a target="_blank" href="/src/pages/kalkulator.html">Look here</a>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -170,27 +181,35 @@
 
     <!-- Section About  -->
     <section class="mt-5">
-        <div class="hero bg-base-300 min-h-fit relative">
-            <div class="hero-content flex-col lg:flex-row">
-                <img 
-                class="max-w-sm rounded-lg "
-                src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp" 
-                alt="">
-                <div class="shadow-2xl m-10 p-2">
-                    <div class="w-[130px] mb-3 border-2 rounded-full px-4 py-1 border-amber-100">
-                        <span class="font-bold">Who Am I</span>
-                    </div>
-                    <h1 class="text-5xl font-bold">About Me</h1>
-                    <p class="py-6">
-                        Saya mahasiswa jurusan teknik informatika universitas pamulang dengan spesialisasi website Developer.
-                    </p>
-                </div>
+        <div class="grid ">
+            <div class="text-center">
+                <h2 class="text-3xl font-bold mb-2">
+                    Let's Connect With Me
+                </h2>
             </div>
-
+            <div class="mt-5 w-1/2 h-[100px] mx-auto">
+                <form action="" class="flex flex-col gap-5 bg-slate-200 p-5 rounded-lg">
+                    <label class="input input-bordered flex items-center gap-1">
+                        Name 
+                        <input type="text" class="grow" placeholder="Example" />
+                      </label>
+                      <label class="input input-bordered flex items-center gap-2">
+                        Email
+                        <input type="text" class="grow" placeholder="example@gmail.com" />
+                      </label>
+                      <label for="" class="input input-bordered flex items-center gap-1">
+                        Whatsapp
+                        <input type="text" class="grow" name="Phone Number" id="">
+                      </label>
+                      <button class="btn btn-secondary">
+                        Connect
+                      </button>
+                </form>
+            </div>
         </div>
     </section>
 
-    <footer class="footer footer-center bg-base-200 text-base-content rounded p-10">
+    <footer class="footer footer-center bg-base-200 text-base-content rounded p-10 mt-[200px]">
         <nav class="grid grid-flow-col gap-4">
           <a class="link link-hover">About us</a>
           <a class="link link-hover">Contact</a>
