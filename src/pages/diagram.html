@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagram Data</title>
+    <link rel="stylesheet" href="/dist/output.css">
+</head>
+<body>
+    <div>
+        <canvas id="chartdata"></canvas>
+    </div>
+
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById("chartdata");
+
+        new Chart(ctx, {
+            type : 'bar',
+            data : {
+                label : ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                dataset : [{
+                    label : 'Laporan Penjualan',
+                    data : [2500, 5000, 7500, 10000],
+                    borderWidht : 1
+                }]
+            },
+            option : {
+                scales : {
+                    y : {
+                        beginAtZero : true
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+</html>
