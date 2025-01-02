@@ -349,27 +349,35 @@
                 Let's Connect With Me
             </h2>
         </div>
-        <div class="w-full h-[500px]">
-            <div id="map" class="w-full h-full overflow-hidden">
+        <div class="flex gap-2"> 
+            <div class="w-[400px] h-[300px]">
+                <div id="map" class="w-full h-full overflow-hidden">
+                </div>
             </div>
+            <div class="w-[400px] m-auto ">
+                <form action="" class="bg-slate-200 p-5 rounded-lg w-full h-[300px] gap-3">
+                    <label class="input input-bordered flex items-center gap-1 mb-2">
+                        Name 
+                        <input type="text" class="grow" placeholder="Example" />
+                      </label>
+                      <label class="input input-bordered flex items-center gap-2 mb-2">
+                        Email
+                        <input type="text" class="grow" placeholder="example@gmail.com" />
+                      </label>
+                      <label for="" class="input input-bordered flex items-center gap-1 mb-2">
+                        Whatsapp
+                        <input type="text" class="grow" name="Phone Number" id="">
+                      </label>
+                      <button class="btn btn-secondary">
+                        Connect
+                      </button>
+                </form>
+    
+            </div>
+
         </div>
-        <form action="" class="bg-slate-200 p-5 rounded-lg">
-            <label class="input input-bordered flex items-center gap-1">
-                Name 
-                <input type="text" class="grow" placeholder="Example" />
-              </label>
-              <label class="input input-bordered flex items-center gap-2">
-                Email
-                <input type="text" class="grow" placeholder="example@gmail.com" />
-              </label>
-              <label for="" class="input input-bordered flex items-center gap-1">
-                Whatsapp
-                <input type="text" class="grow" name="Phone Number" id="">
-              </label>
-              <button class="btn btn-secondary">
-                Connect
-              </button>
-        </form>
+        
+        
     </section>
 
     <section class="mt-5">
@@ -429,14 +437,14 @@
       <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
       <script>
         // Initialize map
-        var map = L.map('map').setView([-6.491969, 106.7646049], 16.92);
+        var map = L.map('map').setView([-6.491969, 106.7646049], 16);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-L.marker([51.5, -0.09]).addTo(map)
-    .bindPopup('A pretty CSS popup.<br> Easily customizable.')
+L.marker([-6.491969, 106.7646049]).addTo(map)
+    .bindPopup('Connect With Me')
     .openPopup();
       </script>
 </body>
