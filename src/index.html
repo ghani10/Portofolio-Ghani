@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio Ghani | Web Developer</title>
     <link rel="stylesheet" href="/dist/output.css">
+    <style>
+        #map {
+          height: 500px; /* Atur tinggi peta */
+        }
+      </style>
 </head>
 <body>
     
@@ -136,7 +141,7 @@
                 <div class="card bg-slate-50 w-96 shadow-xl">
                     <figure>
                         <img 
-                        src="/src/asset/intro-css-ghani.png" 
+                        src="/Portofolio-Ghani/src/asset/intro-css-ghani.png" 
                         alt=""
                         >
                     </figure>
@@ -158,7 +163,31 @@
                     </div>
                 </div>
             </div>
-            
+            <div id="#kalkulator" class="carousel-item">
+                <div class="card bg-slate-50 w-96 shadow-xl">
+                    <figure>
+                        <img 
+                        src="asset/js-ghani.jpg" 
+                        alt=""
+                        >
+                    </figure>
+                    <div class="card-body">
+                        <h2 class="card-title font-sans font-bold text-slate-700">
+                            Intro to JS
+                            <div class="badge badge-secondary">New!</div>
+                        </h2>
+                        <p> Saya telah mengikuti cource Javascript dari Sololearn</p>
+                        <div class="card-actions justify-end">
+                            <div class="badge badge-outline">Course</div>
+                            <div class="badge badge-outline">Boiler Plate</div>
+                        </div>
+                        <div>
+                            <button class="btn btn-active">
+                                <a target="_blank" href="https://www.sololearn.com/certificates/CC-MXKHBEYZ">Look here</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -313,33 +342,34 @@
     <!-- Section Carousel end -->
 
     <!-- Section About  -->
-    <section class="mt-5">
-        <div class="grid ">
-            <div class="text-center">
-                <h2 class="text-3xl font-bold mb-2">
-                    Let's Connect With Me
-                </h2>
-            </div>
-            <div class="mt-5 w-1/2 h-[100px] mx-auto">
-                <form action="" class="flex flex-col gap-5 bg-slate-200 p-5 rounded-lg">
-                    <label class="input input-bordered flex items-center gap-1">
-                        Name 
-                        <input type="text" class="grow" placeholder="Example" />
-                      </label>
-                      <label class="input input-bordered flex items-center gap-2">
-                        Email
-                        <input type="text" class="grow" placeholder="example@gmail.com" />
-                      </label>
-                      <label for="" class="input input-bordered flex items-center gap-1">
-                        Whatsapp
-                        <input type="text" class="grow" name="Phone Number" id="">
-                      </label>
-                      <button class="btn btn-secondary">
-                        Connect
-                      </button>
-                </form>
+    <section class="mt-5 grid grid-cols-1 lg:grid-cols-2 gap-5">
+        <div class="text-center">
+            <h2 class="text-3xl font-bold mb-2">
+                Let's Connect With Me
+            </h2>
+        </div>
+        <div class="w-full h-[300px]">
+            <div id="map" class="w-full h-full">
+                <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
             </div>
         </div>
+        <form action="" class="bg-slate-200 p-5 rounded-lg">
+            <label class="input input-bordered flex items-center gap-1">
+                Name 
+                <input type="text" class="grow" placeholder="Example" />
+              </label>
+              <label class="input input-bordered flex items-center gap-2">
+                Email
+                <input type="text" class="grow" placeholder="example@gmail.com" />
+              </label>
+              <label for="" class="input input-bordered flex items-center gap-1">
+                Whatsapp
+                <input type="text" class="grow" name="Phone Number" id="">
+              </label>
+              <button class="btn btn-secondary">
+                Connect
+              </button>
+        </form>
     </section>
     
 
@@ -391,5 +421,21 @@
           <p>Copyright © 2024 - All right reserved by Fahriza Abdul Ghani</p>
         </aside>
       </footer>
+
+      <script>
+        // Inisialisasi peta
+        const map = L.map('map').setView([-6.2088, 106.8456], 13); // Koordinat Jakarta
+    
+        // Tambahkan tile layer dari OpenStreetMap
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+          maxZoom: 19,
+          attribution: '© OpenStreetMap contributors'
+        }).addTo(map);
+    
+        // Tambahkan marker
+        L.marker([-6.2088, 106.8456]).addTo(map)
+          .bindPopup('Jakarta, Indonesia')
+          .openPopup();
+      </script>
 </body>
 </html>
