@@ -2422,6 +2422,10 @@ html {
   height: 100%;
 }
 
+.h-screen {
+  height: 100vh;
+}
+
 .min-h-fit {
   min-height: -moz-fit-content;
   min-height: fit-content;
@@ -2453,6 +2457,10 @@ html {
 
 .w-12 {
   width: 3rem;
+}
+
+.w-\[500px\] {
+  width: 500px;
 }
 
 .max-w-\[280px\] {
@@ -2541,6 +2549,10 @@ html {
   --tw-space-x-reverse: 0;
   margin-right: calc(2rem * var(--tw-space-x-reverse));
   margin-left: calc(2rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }
 
 .rounded {

@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portofolio Ghani | Web Developer</title>
     <link rel="stylesheet" href="/dist/output.css">
-    <style>
-        #map {
-          height: 500px; /* Atur tinggi peta */
-        }
-      </style>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
 </head>
 <body>
     
@@ -348,9 +349,8 @@
                 Let's Connect With Me
             </h2>
         </div>
-        <div class="w-full h-[300px]">
-            <div id="map" class="w-full h-full">
-                <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+        <div class="w-full h-[500px]">
+            <div id="map" class="w-full h-full overflow-hidden">
             </div>
         </div>
         <form action="" class="bg-slate-200 p-5 rounded-lg">
@@ -370,6 +370,10 @@
                 Connect
               </button>
         </form>
+    </section>
+
+    <section class="mt-5">
+
     </section>
     
 
@@ -422,20 +426,18 @@
         </aside>
       </footer>
 
+      <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
       <script>
-        // Inisialisasi peta
-        const map = L.map('map').setView([-6.2088, 106.8456], 13); // Koordinat Jakarta
-    
-        // Tambahkan tile layer dari OpenStreetMap
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-          maxZoom: 19,
-          attribution: '© OpenStreetMap contributors'
-        }).addTo(map);
-    
-        // Tambahkan marker
-        L.marker([-6.2088, 106.8456]).addTo(map)
-          .bindPopup('Jakarta, Indonesia')
-          .openPopup();
+        // Initialize map
+        var map = L.map('map').setView([-6.491969, 106.7646049], 16.92);
+
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+L.marker([51.5, -0.09]).addTo(map)
+    .bindPopup('A pretty CSS popup.<br> Easily customizable.')
+    .openPopup();
       </script>
 </body>
 </html>
